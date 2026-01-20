@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review - Tripadvisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-owl"></i> Tripadvisor</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="review.html" class="active-link">Review</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="review-main">
+        <section class="review-hero">
+            <div class="review-hero-content">
+                <h1>Write a Review</h1>
+                <p>Share your experience. Help other travelers.</p>
+                <div class="review-search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="What would you like to review?">
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content">
+            <h2 class="section-title">Your recent contributions</h2>
+            
+            <div class="review-form-card">
+                <div class="review-form-header">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff43c63e1c24?w=100" alt="Hotel Mini" class="mini-img">
+                    <div>
+                        <h3>Grand Luxury Resort & Spa</h3>
+                        <p>Vellore, India</p>
+                    </div>
+                </div>
+                
+                <hr>
+
+                <div class="rating-input">
+                    <p>How would you rate your experience?</p>
+                    <div class="star-rating">
+                        <i class="fa-regular fa-star" onclick="rate(1)"></i>
+                        <i class="fa-regular fa-star" onclick="rate(2)"></i>
+                        <i class="fa-regular fa-star" onclick="rate(3)"></i>
+                        <i class="fa-regular fa-star" onclick="rate(4)"></i>
+                        <i class="fa-regular fa-star" onclick="rate(5)"></i>
+                    </div>
+                </div>
+
+                <div class="text-input-group">
+                    <label>Title of your review</label>
+                    <input type="text" placeholder="Summarize your visit">
+                    
+                    <label>Your review</label>
+                    <textarea rows="6" placeholder="The service was amazing, the view was beautiful..."></textarea>
+                </div>
+
+                <button class="submit-review-btn">Submit Review</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>About Tripadvisor</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Resources and Policies</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Trust & Safety</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="review.html">Write a review</a></li>
+                <li><a href="discover.html">Add a Place</a></li>
+                <li><a href="trips.html">Join</a></li>
+                <li><a href="index.html">Travelers' Choice</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Do Business With Us</h4>
+            <ul>
+                <li><a href="#">Owners</a></li>
+                <li><a href="#">Business Advantage</a></li>
+                <li><a href="#">Sponsored Placements</a></li>
+                <li><a href="#">Access our Content API</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get the App</h4>
+            <div class="app-links">
+                <a href="#"><i class="fa-brands fa-apple"></i> App Store</a>
+                <a href="#"><i class="fa-brands fa-google-play"></i> Google Play</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-owl"></i>
+                <span>© 2026 Tripadvisor LLC All rights reserved.</span>
+            </div>
+            <div class="legal-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Consent</a>
+                <a href="#">Site Map</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+   <script src="script.js"></script>
+</body>
+</html>

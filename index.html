@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TripAdvisor Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <i class="fa-solid fa-owl"></i> Tripadvisor
+        </a>
+        <div class="header-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="review.html">Review</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Where to?</h1>
+    <div class="category-nav">
+        <div class="category-item active" onclick="filterSelection('all', this)">
+            <i class="fa-solid fa-house"></i> Search All
+        </div>
+        <div class="category-item" onclick="filterSelection('hotel', this)">
+            <i class="fa-solid fa-bed"></i> Hotels
+        </div>
+        <div class="category-item" onclick="filterSelection('restaurant', this)">
+            <i class="fa-solid fa-utensils"></i> Restaurants
+        </div>
+        <div class="category-item" onclick="filterSelection('flight', this)">
+            <i class="fa-solid fa-plane"></i> Flights
+        </div>
+        <div class="category-item" onclick="filterSelection('experience', this)">
+            <i class="fa-solid fa-ticket"></i> Things to Do
+        </div>
+    </div>
+    <div class="main-search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon-large"></i>
+        <input type="text" class="big-search-box" placeholder="Places to go, things to do, hotels..." />
+        <button class="search-btn-large">Search</button>
+    </div>
+    <div class="filters">
+        <select class="filter-select"><option>Price: Any</option></select>
+        <select class="filter-select"><option>Rating: Any</option></select>
+    </div>
+</section>
+
+<main class="main-content">
+    <div class="section-header">
+        <h2 class="section-title">Explore Listings</h2>
+        <p class="section-subtitle">Top rated spots matching your category</p>
+    </div>
+    <div class="card-grid">
+        <!-- Cards go here -->
+          <div class="card-grid">
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop" alt="Paris">
+                </div>
+                <h3 class="card-title">Paris, France</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <span class="review-count">3,204 reviews</span>
+                </div>
+                <p class="card-desc">The city of lights, love, and incredible food.</p>
+            </div>
+
+            <div class="card" data-category="hotel">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop" alt="Hotel">
+                </div>
+                <h3 class="card-title">Grand Resort Maui</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></span>
+                    <span class="review-count">1,500 reviews</span>
+                </div>
+                <p class="card-desc">Luxury stay with ocean views.</p>
+            </div>
+
+             <div class="card" data-category="restaurant">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop" alt="Restaurant">
+                </div>
+                <h3 class="card-title">La Trattoria</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i></span>
+                    <span class="review-count">850 reviews</span>
+                </div>
+                <p class="card-desc">Authentic Italian dining experience.</p>
+            </div>
+
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=2070&auto=format&fit=crop" alt="Tour">
+                </div>
+                <h3 class="card-title">Tokyo Street Food Tour</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></span>
+                    <span class="review-count">4,100 reviews</span>
+                </div>
+                <p class="card-desc">Taste the best local dishes in Shibuya.</p>
+            </div>
+
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?q=80&w=2626&auto=format&fit=crop" alt="Safari">
+                </div>
+                <h3 class="card-title">Serengeti Safari</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <span class="review-count">900 reviews</span>
+                </div>
+                <p class="card-desc">Witness the great migration.</p>
+            </div>
+
+            <div class="card" data-category="flight">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop" alt="Plane">
+                </div>
+                <h3 class="card-title">Flights to London</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></span>
+                    <span class="review-count">Best Price</span>
+                </div>
+                <p class="card-desc">Direct flights starting at $400.</p>
+            </div>
+
+            <!-- Additional tourist spots from India -->
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" alt="Taj Mahal, Agra">
+                </div>
+                <h3 class="card-title">Taj Mahal, Agra</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <span class="review-count">4,500 reviews</span>
+                </div>
+                <p class="card-desc">Iconic white marble mausoleum and symbol of love.</p>
+            </div>
+
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.uwODiG2gQJMyxmZMqfhBUAHaE8?w=1000&h=667&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jaipur, Rajasthan">
+                </div>
+                <h3 class="card-title">Jaipur, Rajasthan</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <span class="review-count">3,800 reviews</span>
+                </div>
+                <p class="card-desc">The Pink City with forts, palaces, and vibrant markets.</p>
+            </div>
+
+            <div class="card" data-category="experience">
+                <div class="card-image-wrapper">
+                    <i class="fa-regular fa-heart heart-icon"></i>
+                    <img src="https://www.tourmyindia.com/blog/wp-content/uploads/2015/05/varanasi.jpg" alt="Varanasi">
+                </div>
+                <h3 class="card-title">Varanasi, Uttar Pradesh</h3>
+                <div class="card-rating">
+                    <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                    <span class="review-count">4,200 reviews</span>
+                </div>
+                <p class="card-desc">Spiritual city on the banks of the Ganges, rich in culture.</p>
+            </div>
+        <div class="card" data-category="experience">
+            <div class="card-image-wrapper">
+                <i class="fa-regular fa-heart heart-icon"></i>
+                <img src="https://www.treebo.com/blog/wp-content/uploads/2017/05/Meenakshi-Temple.jpg" alt="Meenakshi Temple, Madurai" />
+            </div>
+            <h3 class="card-title">Meenakshi Temple, Madurai</h3>
+            <div class="card-rating">
+                <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                <span class="review-count">2,500 reviews</span>
+            </div>
+            <p class="card-desc">Ancient temple with stunning architecture.</p>
+        </div> <!-- Additional Indian spots -->
+        <div class="card" data-category="experience">
+            <div class="card-image-wrapper">
+                <i class="fa-regular fa-heart heart-icon"></i>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop" alt="Taj Mahal, Agra" />
+            </div>
+            <h3 class="card-title">Taj Mahal, Agra</h3>
+            <div class="card-rating">
+                <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                <span class="review-count">4,500 reviews</span>
+            </div>
+            <p class="card-desc">Iconic white marble mausoleum and symbol of love.</p>
+        </div>
+        <div class="card" data-category="experience">
+            <div class="card-image-wrapper">
+                <i class="fa-regular fa-heart heart-icon"></i>
+                <img src="https://tse4.mm.bing.net/th/id/OIP.-yDdqU54R5SG0RgGs9djcwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jaipur, Rajasthan" />
+            </div>
+            <h3 class="card-title">Jaipur, Rajasthan</h3>
+            <div class="card-rating">
+                <span class="bubbles"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i></span>
+                <span class="review-count">3,800 reviews</span>
+            </div>
+            <p class="card-desc">The Pink City with forts, palaces, and vibrant markets.</p>
+        </div>
+        
+        <!-- More cards as needed -->
+        <!-- ... -->
+    </div>
+</main>
+
+<footer class="main-footer">
+    <!-- Footer content as before -->
+       <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>About Tripadvisor</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Resources and Policies</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Trust & Safety</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="review.html">Write a review</a></li>
+                <li><a href="discover.html">Add a Place</a></li>
+                <li><a href="trips.html">Join</a></li>
+                <li><a href="index.html">Travelers' Choice</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Do Business With Us</h4>
+            <ul>
+                <li><a href="#">Owners</a></li>
+                <li><a href="#">Business Advantage</a></li>
+                <li><a href="#">Sponsored Placements</a></li>
+                <li><a href="#">Access our Content API</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get the App</h4>
+            <div class="app-links">
+                <a href="#"><i class="fa-brands fa-apple"></i> App Store</a>
+                <a href="#"><i class="fa-brands fa-google-play"></i> Google Play</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-owl"></i>
+                <span>© 2026 Tripadvisor LLC All rights reserved.</span>
+            </div>
+            <div class="legal-links">
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Consent</a>
+                <a href="#">Site Map</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
