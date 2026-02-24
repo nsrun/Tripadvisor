@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -18,14 +20,17 @@
                     <li><a href="discover.html">Discover</a></li>
                     <li><a href="trips.html" class="active-link">Trips</a></li>
                     <li><a href="review.html">Review</a></li>
-                  
+                    <li><a href="budget.html">Budget</a></li>
                 </ul>
             </nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <main class="main-content">
-        <div class="trips-header">
+        <div class="trips-header reveal">
             <div>
                 <h1>Trips</h1>
                 <p>Private · 0 items</p>
@@ -33,13 +38,13 @@
             <button class="create-trip-btn"><i class="fa-solid fa-plus"></i> Create Trip</button>
         </div>
 
-        <div class="trips-tabs">
+        <div class="trips-tabs reveal reveal-delay-1">
             <span class="tab active">All</span>
             <span class="tab">Saves</span>
             <span class="tab">Bookings</span>
         </div>
 
-        <div class="trips-empty-state">
+        <div class="trips-empty-state reveal reveal-delay-2">
             <div class="empty-card">
                 <i class="fa-solid fa-heart-circle-plus big-icon-gray"></i>
                 <h2>No saves yet</h2>
@@ -49,72 +54,74 @@
         </div>
 
         <div class="saved-items-grid" style="display: none;">
-            </div>
+        </div>
     </main>
 
     <footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-col">
-            <h4>About Tripadvisor</h4>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Press</a></li>
-                <li><a href="#">Resources and Policies</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Trust & Safety</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Explore</h4>
-            <ul>
-                <li><a href="review.html">Write a review</a></li>
-                <li><a href="discover.html">Add a Place</a></li>
-                <li><a href="trips.html">Join</a></li>
-                <li><a href="index.html">Travelers' Choice</a></li>
-                <li><a href="#">Help Center</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Do Business With Us</h4>
-            <ul>
-                <li><a href="#">Owners</a></li>
-                <li><a href="#">Business Advantage</a></li>
-                <li><a href="#">Sponsored Placements</a></li>
-                <li><a href="#">Access our Content API</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Get the App</h4>
-            <div class="app-links">
-                <a href="#"><i class="fa-brands fa-apple"></i> App Store</a>
-                <a href="#"><i class="fa-brands fa-google-play"></i> Google Play</a>
+        <div class="footer-container">
+            <div class="footer-col reveal">
+                <h4>About Tripadvisor</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Resources and Policies</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Trust & Safety</a></li>
+                </ul>
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-            </div>
-        </div>
-    </div>
 
-    <div class="footer-bottom">
-        <div class="footer-bottom-content">
-            <div class="footer-logo">
-                <i class="fa-solid fa-owl"></i>
-                <span>© 2026 Tripadvisor LLC All rights reserved.</span>
+            <div class="footer-col reveal">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="review.html">Write a review</a></li>
+                    <li><a href="discover.html">Add a Place</a></li>
+                    <li><a href="trips.html">Join</a></li>
+                    <li><a href="index.html">Travelers' Choice</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
             </div>
-            <div class="legal-links">
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Consent</a>
-                <a href="#">Site Map</a>
+
+            <div class="footer-col reveal">
+                <h4>Do Business With Us</h4>
+                <ul>
+                    <li><a href="#">Owners</a></li>
+                    <li><a href="#">Business Advantage</a></li>
+                    <li><a href="#">Sponsored Placements</a></li>
+                    <li><a href="#">Access our Content API</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col reveal">
+                <h4>Get the App</h4>
+                <div class="app-links">
+                    <a href="#"><i class="fa-brands fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-owl"></i>
+                    <span>© 2026 Tripadvisor LLC All rights reserved.</span>
+                </div>
+                <div class="legal-links">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Consent</a>
+                    <a href="#">Site Map</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
